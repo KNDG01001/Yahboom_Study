@@ -28,13 +28,6 @@ void Beep_Off(void)
 {
     beep_state = BEEP_STATE_OFF;
     beep_on_time = 0;
-    gpio_set_level(BEEP_GPIO, BRRP_ACTIVE_LEVEL);
-}
-
-void Beep_Off(void)
-{
-    beep_state = BEEP_STATE_OFF;
-    beep_on_time = 0;
     gpio_set_level(BEEP_GPIO, !BEEP_ACTIVE_LEVEL);
 }
 
